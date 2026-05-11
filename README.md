@@ -1,16 +1,100 @@
-# React + Vite
+# H2S Hackathon Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Vite + React landing page for a futuristic hackathon website. The page is built from reusable React sections and a single global stylesheet that recreates the dark purple visual direction from the reference screenshots.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite 8
+- Tailwind CSS 4
+- Framer Motion
+- ESLint
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```text
+src/
+  App.jsx
+  index.css
+  main.jsx
+  components/
+    Navbar.jsx
+    Hero.jsx
+    About.jsx
+    Participation.jsx
+    Challenges.jsx
+    Schedule.jsx
+    Rewards.jsx
+    FAQ.jsx
+    Footer.jsx
+  data/
+    challenges.js
+    faq.js
+    schedule.js
+public/
+  assets/
+    astronaut.png
+    hero-cyber-model.png
+```
 
-## Expanding the ESLint configuration
+## `src/index.css`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This file owns the visual system for the whole page:
+
+- imports Tailwind with `@import "tailwindcss";`
+- defines global body, typography, links, and page background styles
+- styles the shared section layout, buttons, navbar, hero, cards, timeline, rewards, FAQ, and footer
+- includes responsive media queries for tablet and mobile layouts
+
+The hero outline text uses:
+
+```css
+-webkit-text-stroke: 2px #8b3dff;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 1px #8b3dff;
+```
+
+This avoids the unsupported plain `text-stroke` property and keeps the `FUTURE` outline visible in browsers that support WebKit text stroke, with a small fallback glow.
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local Vite URL shown in the terminal, usually:
+
+```text
+http://127.0.0.1:5173/
+```
+
+On Windows PowerShell, if `npm` is blocked by script policy, use:
+
+```bash
+npm.cmd run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+Or on Windows PowerShell:
+
+```bash
+npm.cmd run build
+```
+
+## Lint
+
+```bash
+npm run lint
+```
+
+Or on Windows PowerShell:
+
+```bash
+npm.cmd run lint
+```

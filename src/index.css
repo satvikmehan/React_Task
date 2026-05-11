@@ -274,9 +274,10 @@ a {
 }
 
 .hero-outline {
-  color: transparent;
+  color: #08070b;
   -webkit-text-stroke: 2px #8b3dff;
-  text-stroke: 2px #8b3dff;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 1px #8b3dff;
 }
 
 .hero-cta {
