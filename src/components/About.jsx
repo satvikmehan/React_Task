@@ -74,11 +74,21 @@ function About() {
         </div>
 
         <div className="collage" aria-hidden="true">
-          <span className="collage-card one" />
-          <span className="collage-card two" />
-          <span className="collage-card three" />
-          <span className="collage-card four" />
-          <span className="collage-card five" />
+          <span className="collage-card one">
+            <img src="/assets/1.jpg" alt="" />
+          </span>
+          <span className="collage-card two">
+            <img src="/assets/3.jpg" alt="" />
+          </span>
+          <span className="collage-card three">
+            <img src="/assets/4.jpg" alt="" />
+          </span>
+          <span className="collage-card four">
+            <img src="/assets/5.jpg" alt="" />
+          </span>
+          <span className="collage-card five">
+            <img src="/assets/6.jpg" alt="" />
+          </span>
           <span className="collage-line horizontal" />
           <span className="collage-line vertical" />
         </div>

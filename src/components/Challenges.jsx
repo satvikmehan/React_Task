@@ -11,6 +11,7 @@ function Challenges() {
           <ChallengeCard
             key={challenge.id}
             id={challenge.id}
+            image={challenge.image}
             title={challenge.title}
             tone={challenge.tone}
             featured={challenge.featured}

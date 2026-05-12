@@ -410,10 +410,18 @@ a {
   position: absolute;
   inset: 0;
   content: "";
+  pointer-events: none;
   background-image:
     linear-gradient(135deg, transparent 46%, rgba(255, 255, 255, 0.18) 47% 48%, transparent 49%),
     radial-gradient(circle at 50% 50%, rgba(139, 61, 255, 0.46), transparent 42%);
-  opacity: 0.76;
+  opacity: 0.32;
+}
+
+.collage-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .collage-card.one {
@@ -616,8 +624,10 @@ a {
 }
 
 .challenge-thumb {
-  height: 58px;
+  position: relative;
+  height: 70px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 38%),
     radial-gradient(circle at 70% 42%, rgba(255, 255, 255, 0.76), transparent 0.38rem),
@@ -625,13 +635,20 @@ a {
 }
 
 .challenge-thumb::after {
-  display: block;
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 0 18%, rgba(255, 255, 255, 0.12) 18% 20%, transparent 20% 42%, rgba(0, 0, 0, 0.12) 42% 100%),
+    linear-gradient(135deg, rgba(139, 61, 255, 0.16), transparent 58%);
+}
+
+.challenge-thumb img {
   width: 100%;
   height: 100%;
-  content: "";
-  background:
-    linear-gradient(90deg, transparent 0 18%, rgba(255, 255, 255, 0.16) 18% 20%, transparent 20% 42%, rgba(0, 0, 0, 0.2) 42% 100%),
-    repeating-linear-gradient(120deg, transparent 0 18px, rgba(255, 255, 255, 0.08) 19px 20px);
+  display: block;
+  object-fit: cover;
 }
 
 .thumb-cyan {
@@ -936,12 +953,12 @@ a {
   }
 
   .challenge-row {
-    grid-template-columns: 48px 1fr 30px;
-    gap: 16px;
+    grid-template-columns: 44px minmax(86px, 112px) 1fr 30px;
+    gap: 14px;
   }
 
   .challenge-thumb {
-    display: none;
+    height: 62px;
   }
 
   .faq-row {
